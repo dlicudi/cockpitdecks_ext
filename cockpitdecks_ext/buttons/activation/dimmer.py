@@ -31,7 +31,7 @@ class LightDimmer(UpDown):
         if currval is not None and 0 <= currval < len(self.dimmer):
             deck = self.button.deck
             if self.deck_alt is not None:
-                deck = self.button.deck.cockpit.cockpit.get(self.deck_alt)
+                deck = self.button.deck.cockpit.decks.get(self.deck_alt)
                 if deck is None:
                     logger.warning(f"target deck {self.deck_alt} not found")
                     return
